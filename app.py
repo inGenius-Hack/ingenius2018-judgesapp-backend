@@ -83,4 +83,4 @@ def insert_score():
 
 
 if __name__ == "__main__":
-    app.run(host="192.168.2.6")
+    app.run()
