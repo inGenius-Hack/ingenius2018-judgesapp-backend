@@ -61,25 +61,28 @@ def get_scores():
 
 @app.route("/insertScore", methods=['POST'])
 def insert_score():
-    # TODO - Exception Handling
-    mydb = mysql.connector.connect(host=host, user=user, passwd=passwd, database=database )
-    mycursor = mydb.cursor()
-
-    insertion_statement = "INSERT INTO score VALUES (%s, %s, %s, %s, %s, %s)"
-    insertion_data = (
-            request.form.get("judgeID"), 
-            request.form.get("teamID"),
-            request.form.get("scoreOne"),
-            request.form.get("scoreTwo"),
-            request.form.get("scoreThree"),
-            request.form.get("scoreFour"),
-    )
-    mycursor.execute(insertion_statement, insertion_data)
-    mydb.commit()
+    try:
+        mydb = mysql.connector.connect(host=host, user=user, passwd=passwd, database=database )
+        mycursor = mydb.cursor()
+        insertion_statement = "INSERT INTO score VALUES (%s, %s, %s, %s, %s, %s)"
+        insertion_data = (
+                request.form.get("judgeID"), 
+                request.form.get("teamID"),
+                request.form.get("Technical_Difficulty"),
+                request.form.get("Completeness"),
+                request.form.get("Originality"),
+                request.form.get("Feasibility"),
+        )
+        mycursor.execute(insertion_statement, insertion_data)
+        mydb.commit()
+        mycursor.close()
+        mydb.close()
+        return "Insertion successfull"
+    except expression as e:
+        return "Insertion failed"
     
-    mycursor.close()
-    mydb.close()
-    return "Insertion successfull"
+    
+    
 
 
 if __name__ == "__main__":
