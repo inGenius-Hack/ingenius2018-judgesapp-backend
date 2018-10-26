@@ -78,8 +78,8 @@ def insert_score():
         mycursor.close()
         mydb.close()
         return "Insertion successfull"
-    except (MySQLdb.Error, MySQLdb.Warning) as e:
-        return "Insertion failed"
+    except:
+        return "This team has already been judged"
     
     
     
