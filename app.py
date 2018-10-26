@@ -77,9 +77,9 @@ def insert_score():
         mydb.commit()
         mycursor.close()
         mydb.close()
-        return "Insertion successfull"
+        return "SCORE_INSERTED"
     except:
-        return "This team has already been judged"
+        return "ALREADY_JUDGED"
     
     
     
