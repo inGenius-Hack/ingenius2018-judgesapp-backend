@@ -18,7 +18,7 @@ def get_teams():
     mydb = mysql.connector.connect(host=host, user=user, passwd=passwd, database=database )
     mycursor = mydb.cursor()
 
-    statement = "SELECT * FROM team" 
+    statement = "SELECT * FROM myTeamView" 
     mycursor.execute(statement)
     data = mycursor.fetchall()
     
