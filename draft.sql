@@ -108,14 +108,14 @@ order by Team_id;
 
 -- morning judges
 INSERT INTO judge (Judge_name, Domain_id) VALUES
-("Naushad", 1),
-("Gulshan", 1),
-("Saikat", 1),
-("Sharath", 1),
-("Jerry", 2),
-("Sachin", 2),
-("Saha", 2),
-("jyotirmor", 2),
-("Sangamesh", 3),  
-("Vishwas", 3),
-("Arpita", 3);
+("app_j1", 1),
+("app_j2", 1),
+("app_j3", 1),
+("app_j4", 1),
+("ml_j1", 2),
+("ml_j2", 2),
+("ml_j3", 2),
+("ml_j4", 2),
+("iot_j1", 3),  
+("iot_j2", 3),
+("iot_j3", 3);

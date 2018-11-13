@@ -1,7 +1,7 @@
 import mysql.connector
 import csv
 
-host = "ingeniusdbinstance.ckikry8euhki.ap-south-1.rds.amazonaws.com"
+host = "xxx-xxx"
 user = "ingenius2018"
 passwd = "Pesitbsc"
 database = "ingenius2018"
