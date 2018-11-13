@@ -3,7 +3,7 @@ import csv
 from flask import Flask, request, jsonify, send_file
 
 app = Flask(__name__)
-host = "ingeniusdbinstance.ckikry8euhki.ap-south-1.rds.amazonaws.com"
+host = "xxx-xxx"
 user = "ingenius2018"
 passwd = "Pesitbsc"
 database = "ingenius2018"
@@ -80,10 +80,6 @@ def insert_score():
         return "SCORE_INSERTED"
     except:
         return "ALREADY_JUDGED"
-    
-    
-    
-
 
 if __name__ == "__main__":
     app.run()
